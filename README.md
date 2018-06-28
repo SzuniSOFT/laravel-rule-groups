@@ -82,7 +82,7 @@ class RegisterController {
     /**
      * Hey there Mr. Request! I'm watching you!
      * /
-    public function register (Request $request) {
+    public function register(Request $request) {
     
         $this->validate($request, CompanyRuleGroup::rules());
         
@@ -100,7 +100,7 @@ class RegisterController {
     /**
      * Hey there Mr. Request! I'm watching you!
      * /
-    public function register (Request $request) {
+    public function register(Request $request) {
     
         $this->validate($request, [
             'name' => ['required'],
