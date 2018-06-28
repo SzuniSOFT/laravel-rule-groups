@@ -75,39 +75,47 @@ class CompanyRuleGroup extends RuleGroup {
 
 You can easily use rule groups in your controllers. See the example.
 
-```php
+```
 
-/**
- * Hey there Mr. Request! I'm watching you!
- * /
-public function register (Request $request) {
+class RegisterController {
+    use ValidatesRequests;
 
-    $this->validate($request, CompanyRuleGroup::rules());
+    /**
+     * Hey there Mr. Request! I'm watching you!
+     * /
+    public function register (Request $request) {
     
-    // Further NASA-like secret business logic..
-
-} 
+        $this->validate($request, CompanyRuleGroup::rules());
+        
+        // Further NASA-like secret business logic..
+    
+    } 
+}
 ```
 
 This will be equivalent with the following:
 
-```php
+```
 
-/**
- * Hey there Mr. Request! I'm watching you!
- * /
-public function register (Request $request) {
+class RegisterController {
+    use ValidatesRequests;
 
-    $this->validate($request, [
-        'name' => ['required'],
-        'vat_number' => ['required', 'min:5'],
-        'phone' => new MyVeryCustomAndFavoritePhoneRule(),
-        'country' => ['required', Rule::exists('countries', 'iso_2')],
-    ]);
+    /**
+     * Hey there Mr. Request! I'm watching you!
+     * /
+    public function register (Request $request) {
     
-    // Further NASA-like secret business logic..
-
-} 
+        $this->validate($request, [
+            'name' => ['required'],
+            'vat_number' => ['required', 'min:5'],
+            'phone' => new MyVeryCustomAndFavoritePhoneRule(),
+            'country' => ['required', Rule::exists('countries', 'iso_2')],
+        ]);
+        
+        // Further NASA-like secret business logic..
+    
+    } 
+}
 ```
 
 Now you can use this validation group in any other controllers or wherever you want to validate.
