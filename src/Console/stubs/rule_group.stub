@@ -1,0 +1,23 @@
+<?php
+
+namespace DummyNamespace;
+
+use SzuniSoft\RuleGroups\RuleGroup;
+
+class DummyClass extends RuleGroup
+{
+
+    /**
+     * The corresponding rules
+     *
+     * @return array
+     */
+    protected function getAttributeRules()
+    {
+        return [
+            // Type attributes and rules here..
+        ];
+    }
+
+
+}
