@@ -180,6 +180,12 @@ abstract class RuleGroup implements Arrayable, ArrayAccess
                 $rules
             );
         }
+        else if (is_object($rules)) {
+            return [$rules];
+        }
+        else if ($rules instanceof Arrayable) {
+            return $rules->toArray();
+        }
 
         return $rules;
     }
@@ -231,7 +237,8 @@ abstract class RuleGroup implements Arrayable, ArrayAccess
      *
      * @return RuleGroup
      */
-    public static function attributes() {
+    public static function attributes()
+    {
         return static::getInstance();
     }
 
@@ -298,7 +305,7 @@ abstract class RuleGroup implements Arrayable, ArrayAccess
      * Adds an attribute and it's rules to the pool
      *
      * @param $attribute
-     * @param array|string $rules
+     * @param array|string|object $rules
      * @param bool $overwrite
      * @return RuleGroup
      */
