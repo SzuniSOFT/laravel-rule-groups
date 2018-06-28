@@ -214,6 +214,6 @@ Attribute management
 
 Utility
 - ``restore()`` Restores the group to it's initial state.
-- ``prefix()`` Applies prefix on all attribute. You can use deep dotting array access pattern *(x.y.z)*
+- ``prefix($prefix)`` Applies prefix on all attribute. You can use deep dotting array access pattern *(x.y.z)*
 
 Don't forget to invoke the ```toArray()``` method.
