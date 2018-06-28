@@ -209,8 +209,8 @@ Attribute management
 - ``addRulesTo($attribute, $rules)`` Adds new rules to the attribute. Attribute will be created if not exists.
 - ``overwriteRulesOf($attribute, $rules)`` Overwrites rules of a specific attribute.
 - ``without($attribute)`` Removes an attribute and it's rules from the group.
-- ``forgetRulesOf($attribute)`` Removes all rules from an attribute
-- ``addToAll($rules)`` Apply the given rules on all attributes
+- ``forgetRulesOf($attribute)`` Removes all rules from an attribute.
+- ``addToAll($rules)`` Apply the given rules on all attributes.
 
 Utility
 - ``restore()`` Restores the group to it's initial state.
