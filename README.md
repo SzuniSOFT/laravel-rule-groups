@@ -86,7 +86,7 @@ class RegisterController {
     
         $this->validate($request, CompanyRuleGroup::rules());
         
-        // Further NASA-like secret business logic..
+        // Further secret business logic..
     
     } 
 }
@@ -109,7 +109,7 @@ class RegisterController {
             'country' => ['required', Rule::exists('countries', 'iso_2')],
         ]);
         
-        // Further NASA-like secret business logic..
+        // Further secret business logic..
     
     } 
 }
