@@ -76,31 +76,19 @@ class CompanyRuleGroup extends RuleGroup {
 You can easily use rule groups in your controllers. See the example.
 
 ```php
-class RegisterController {
-    use ValidatesRequests;
-
-    /**
-     * Hey there Mr. Request! I'm watching you!
-     * /
-    public function register(Request $request) {
+public function register(Request $request) {
     
         $this->validate($request, CompanyRuleGroup::rules());
         
         // Further secret business logic..
     
-    } 
-}
+    }
 ```
+
 This will be equivalent with the following:
 
 ```php
-class RegisterController {
-    use ValidatesRequests;
-
-    /**
-     * Hey there Mr. Request! I'm watching you!
-     * /
-    public function register(Request $request) {
+public function register(Request $request) {
     
         $this->validate($request, [
             'name' => ['required'],
@@ -111,8 +99,7 @@ class RegisterController {
         
         // Further secret business logic..
     
-    } 
-}
+    }
 ```
 
 Now you can use this validation group in any other controllers or wherever you want to validate.
