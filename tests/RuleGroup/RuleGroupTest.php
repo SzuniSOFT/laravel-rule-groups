@@ -3,9 +3,11 @@
 namespace SzuniSoft\RuleGroups\Test\RuleGroup;
 
 
+use Illuminate\Support\Facades\Validator;
 use Orchestra\Testbench\TestCase;
 use SzuniSoft\RuleGroups\Providers\RuleGroupServiceProvider;
 use SzuniSoft\RuleGroups\Test\RuleGroup\Fixtures\CompanyRuleGroup;
+use SzuniSoft\RuleGroups\Test\RuleGroup\Fixtures\PhoneRule;
 
 class RuleGroupTest extends TestCase
 {
@@ -226,5 +228,16 @@ class RuleGroupTest extends TestCase
         ], $group->toArray());
     }
 
+    /** @test */
+    public function it_can_handle_object_rules()
+    {
+
+        $rule = new PhoneRule();
+
+        $group = $this->ruleGroup(['phone' => ['required']]);
+        $group->addRulesTo('phone', $rule);
+
+        $this->assertSame($rule, $group->toArray()['phone'][1]);
+    }
 
 }
