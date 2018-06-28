@@ -1,3 +1,7 @@
+[![GitHub release](https://img.shields.io/github/release/SzuniSOFT/laravel-rule-groups.svg?style=for-the-badge)](https://github.com/SzuniSOFT/laravel-rule-groups/releases)
+[![Packagist](https://img.shields.io/packagist/dt/szunisoft/laravel-rule-groups.svg?style=for-the-badge)](https://packagist.org/packages/szunisoft/laravel-rule-groups)
+[![license](https://img.shields.io/github/license/szunisoft/laravel-rule-groups.svg?style=for-the-badge)](https://github.com/SzuniSOFT/laravel-rule-groups)
+
 # Rule Groups
 
 With Laravel it's very easy to run predefined validation rules and customize them. It is also possible to create your own rule by several ways.
