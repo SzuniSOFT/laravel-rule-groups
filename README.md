@@ -75,7 +75,8 @@ class CompanyRuleGroup extends RuleGroup {
 
 You can easily use rule groups in your controllers. See the example.
 
-```
+```php
+
 /**
  * Hey there Mr. Request! I'm watching you!
  * /
@@ -90,7 +91,8 @@ public function register (Request $request) {
 
 This will be equivalent with the following:
 
-```
+```php
+
 /**
  * Hey there Mr. Request! I'm watching you!
  * /
