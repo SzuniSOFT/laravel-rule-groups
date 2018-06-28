@@ -1,7 +1,7 @@
 {
     "name": "szunisoft/laravel-rule-groups",
     "license": "MIT",
-    "description": "Useful package..",
+    "description": "Make customizable and reusable rule groups easily..",
     "keywords": [
         "laravel",
         "rule",
