@@ -4,19 +4,19 @@
 
 # Rule Groups
 
-With Laravel it's very easy to run predefined validation rules and customize them. It is also possible to create your own rule by several ways.
+With Laravel it's very easy to run predefined validation rules and customize them. It is also possible to create your own rule in several ways.
 
-One of our projects uses a tons of validations and most of them are the same or very similar to each other.
+One of our projects uses tons of validations and most of them are the same or very similar to each other.
 This package provides an easy way to make reusable validation rule groups.
 
-The prime advantage of this package is the code reusability and centralized rule group controlling and managing.
+The primary advantage of this package is the code reusability with centralized rule group controlling and managing.
 
 ## Installing
 
 ```
 composer require szunisoft/laravel-rule-groups
 ``` 
-If you are on lower version of Laravel and you don't have package discovery yet please add the *ServiceProvider* to the ```config/app.php``` configuration file.
+If you are on a lower version of Laravel and you don't have package discovery yet please add the *ServiceProvider* to the ```config/app.php``` configuration file.
 
 ```php
 'providers' => [
@@ -30,7 +30,7 @@ If you are on lower version of Laravel and you don't have package discovery yet 
 ```
 
 ## Configuration
-By default the package will generate all rule groups to the **app/RuleGroups** directory. You can change it by publishing the configuration file.
+By default the package will generate all rule groups into the **app/RuleGroups** directory. You can change it by publishing the configuration file.
 
 ```
 php artisan vendor:publish --provider="\SzuniSoft\RuleGroups\Providers\RuleGroupServiceProvider" --tag="config"
@@ -110,12 +110,12 @@ Now you can use this validation group in any other controllers or wherever you w
 
 ## Advanced Usage - On demand configuration
 
-In this chapter we'll take a closer look on how we can modify these groups in extremist situations.
+In this chapter we'll take a closer look at how we can modify these groups in extremist situations.
 
 Let's say we have a registration page where the user must specify the information of the managed company but we also need billing information.
 That's okay, easy and simple. But what if the managed company and the billing company are not the same one?
 
-Take a look on the following **Rule Group**
+Take a look at the following **Rule Group**
 
 ```php
 use SzuniSoft\RuleGroups\RuleGroup;
@@ -181,9 +181,9 @@ public function register (Request $request) {
 }
 ```
 
-Let's say it's no enough for us and we need the nearly same rules but not exactly.
+Let's say it's not enough for us and we need almost the same rules but not exactly.
 
-We want to validate the billed company inputs only when the user wants different billing company.
+We want to validate the billed company inputs only when the user want to specify different one.
 
 ```php
 public function register (Request $request) {
@@ -214,6 +214,6 @@ Attribute management
 
 Utility
 - ``restore()`` Restores the group to it's initial state.
-- ``prefix($prefix)`` Applies prefix on all attribute. You can use deep dotting array access pattern *(x.y.z)*
+- ``prefix($prefix)`` Applies prefix on all attributes. You can use deep dotting array access pattern *(x.y.z)*
 
 Don't forget to invoke the ```toArray()``` method.
