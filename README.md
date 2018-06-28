@@ -46,7 +46,7 @@ php artisan make:rule-group CompanyRuleGroup
 
 Locate the generated class. Default location is **app/RuleGroups**.
 
-```
+```php
 use SzuniSoft\RuleGroups\RuleGroup;
 
 class CompanyRuleGroup extends RuleGroup {
