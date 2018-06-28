@@ -14,7 +14,7 @@ composer require szunisoft/laravel-rule-groups
 ``` 
 If you are on lower version of Laravel and you don't have package discovery yet please add the *ServiceProvider* to the ```config/app.php``` configuration file.
 
-```
+```php
 'providers' => [
     ...
     
@@ -75,7 +75,7 @@ class CompanyRuleGroup extends RuleGroup {
 
 You can easily use rule groups in your controllers. See the example.
 
-```php
+```
 /**
  * Hey there Mr. Request! I'm watching you!
  * /
@@ -90,7 +90,7 @@ public function register (Request $request) {
 
 This will be equivalent with the following:
 
-```php
+```
 /**
  * Hey there Mr. Request! I'm watching you!
  * /
