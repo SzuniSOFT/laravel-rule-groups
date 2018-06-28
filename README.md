@@ -75,8 +75,7 @@ class CompanyRuleGroup extends RuleGroup {
 
 You can easily use rule groups in your controllers. See the example.
 
-```
-
+```php
 class RegisterController {
     use ValidatesRequests;
 
@@ -92,11 +91,9 @@ class RegisterController {
     } 
 }
 ```
-
 This will be equivalent with the following:
 
-```
-
+```php
 class RegisterController {
     use ValidatesRequests;
 
